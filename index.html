@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somesh Studios | Magazine & Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper-white: #ffffff;
+            --ink-black: #1a1a1a;
+            --accent-red: #d90429;
+            --gray-text: #4a4a4a;
+            --border-light: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--paper-white); color: var(--ink-black); line-height: 1.6; }
+
+        /* --- MAGAZINE HEADER --- */
+        header {
+            padding: 40px 5%;
+            text-align: center;
+            border-bottom: 4px double var(--ink-black);
+            margin-bottom: 40px;
+        }
+
+        .mag-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            text-decoration: none;
+            color: var(--ink-black);
+        }
+
+        .mag-meta {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* --- LAYOUT GRID --- */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Main Content | Sidebar */
+            gap: 50px;
+        }
+
+        /* --- FEATURED ARTICLE --- */
+        .featured-post {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .featured-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #f0f0f0;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .featured-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.1;
+            margin: 20px 0;
+        }
+
+        .category-tag {
+            color: var(--accent-red);
+            font-weight: 800;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        /* --- ARTICLE LIST --- */
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 30px;
+        }
+
+        .post-card img {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .post-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .post-card p {
+            font-size: 0.95rem;
+            color: var(--gray-text);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* --- SIDEBAR --- */
+        .sidebar h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--ink-black);
+        }
+
+        .category-list { list-style: none; margin-bottom: 40px; }
+        .category-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .newsletter-box {
+            background: #f9f9f9;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .newsletter-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+        }
+
+        .btn-subscribe {
+            width: 100%;
+            background: var(--ink-black);
+            color: white;
+            padding: 12px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .main-container { grid-template-columns: 1fr; }
+            .featured-post { grid-template-columns: 1fr; }
+            .article-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="mag-logo">Somesh Studios Editorial</a>
+        <span class="mag-meta">Design · Culture · Technology · Feb 2026</span>
+    </nav>
+
+    <div class="main-container">
+        
+        <div class="featured-post">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200" alt="Featured" class="featured-img">
+            <div class="featured-content">
+                <span class="category-tag">Featured Story</span>
+                <h1>The Future of Creative Computing in 2026</h1>
+                <p>How Somesh Studios is redefining the intersection of artificial intelligence and high-end visual storytelling for the next generation of designers.</p>
+                <a href="#" style="color: var(--ink-black); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--accent-red);">Read the full story →</a>
+            </div>
+        </div>
+
+        <main>
+            <div class="article-grid">
+                <article class="post-card">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600" alt="Post">
+                    <span class="category-tag">Design</span>
+                    <h3>Why Minimalist Layouts Still Win</h3>
+                    <p>In a world of digital clutter, Somesh Studios explores why simple, user-focused design continues to convert better than complex animations.</p>
+                </article>
+
+                <article class="post-card">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600" alt="Post">
+                    <span class="category-tag">Tech</span>
+                    <h3>The Rise of 3D Interfaces</h3>
+                    <p>Moving beyond flat design: A look into the new spatial computing era and how it affects web development standards.</p>
+                </article>
+
+                <article class="post-card">
+                    <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=600" alt="Post">
+                    <span class="category-tag">Culture</span>
+                    <h3>Modern Workspaces in India</h3>
+                    <p>A tour through the most creative studio environments across the country, featuring Somesh Studios' new lab.</p>
+                </article>
+
+                <article class="post-card">
+                    <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600" alt="Post">
+                    <span class="category-tag">Business</span>
+                    <h3>The WhatsApp Economy</h3>
+                    <p>Why modern businesses are ditching complex checkouts for direct-to-chat sales models.</p>
+                </article>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <h4>Popular Categories</h4>
+            <ul class="category-list">
+                <li>Design <span>(12)</span></li>
+                <li>Technology <span>(08)</span></li>
+                <li>Branding <span>(05)</span></li>
+                <li>Photography <span>(09)</span></li>
+            </ul>
+
+            <div class="newsletter-box">
+                <h4>Join the Gazette</h4>
+                <p style="font-size: 0.8rem; margin-top: 10px;">Get the weekly Somesh Studios newsletter.</p>
+                <input type="email" placeholder="email@address.com">
+                <button class="btn-subscribe">Subscribe Now</button>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <h4>Connect With Us</h4>
+                <a href="https://wa.me/917307638310" style="color: var(--accent-red); font-weight: 700; text-decoration: none;">Chat on WhatsApp</a>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer style="margin-top: 80px; padding: 60px 5%; background: var(--ink-black); color: white; text-align: center;">
+        <p style="font-family: 'Playfair Display'; font-size: 1.5rem;">Somesh Studios Editorial</p>
+        <p style="opacity: 0.5; font-size: 0.8rem; margin-top: 20px;">© 2026 Somesh Studios Gazette. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
